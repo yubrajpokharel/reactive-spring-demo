@@ -1,0 +1,23 @@
+server:
+  port: 8181
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  r2dbc:
+    url: r2dbc:h2:mem:///testDb
+    username: sa
+    password: pass
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:29092
+      group-id: local-group-id
+      auto-offset-reset: earliest
+
+app:
+  default:
+    topic: test-topic-1
